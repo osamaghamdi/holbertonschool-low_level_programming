@@ -1,21 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Prints 0 to 9.
+ * main - hi
+ *
  *
  * Return: Always 0.
- */
+*/
 
 int main(void)
 {
 
-int i;
+char l;
 
-for (i = 0; i <= 10; i++)
-putchar(i);
+for (l = 'z'; l >= 'a'; l--)
+putchar(l);
 
 putchar('\n');
-
 return (0);
-
 }
