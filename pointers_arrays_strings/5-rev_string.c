@@ -9,17 +9,9 @@
 void rev_string(char *s)
 {
 
-int i = 0;
+int i, m, h;
 
-while (s[i] != '\0')
-{
-
-_putchar(s[i]);
-i++;
-
-}
-
-_putchar('\n');
+char f, l;
 
 i = 0;
 
@@ -30,16 +22,17 @@ i++;
 
 }
 
-i--;
+m = i - 1;
+h = m / 2;
 
-while (i >= 0)
+while (h >= 0)
 {
 
-_putchar(s[i]);
-i--;
-
+f = s[m - h];
+l = s[h];
+s[h] = f;
+s[m - h] = l;
+h--;
 }
-
-_putchar('\n');
 
 }
