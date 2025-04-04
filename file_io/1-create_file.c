@@ -1,31 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * create_file - create file
- * @filename: pointer to name of the file to create
- * @text_content: pointer to string to write the file
- * Return: 1 or -1
+ * main - check the code
+ *
+ * Return: Always 0.
  */
-int create_file(const char *filename, char *text_content)
+int main(int ac, char **av)
 {
-int oo, ww, i = 0;
+    int res;
 
-if (filename == NULL)
-return (-1);
-
-if (text_content != NULL)
-{
-for (i = 0; text_content[i];)
-i++;
-}
-
-oo = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-ww = write(oo, text_content, i);
-
-if (oo == -1 || ww == -1)
-return (-1);
-
-close(oo);
-
-return (1);
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = create_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
 }
