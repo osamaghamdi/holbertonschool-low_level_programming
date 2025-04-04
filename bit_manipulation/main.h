@@ -1,5 +1,5 @@
 #ifndef MAIN
-#define NAIN
+#define MAIN
 
 int _putchar(char c);
 
