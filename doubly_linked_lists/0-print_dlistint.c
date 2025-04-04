@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_dlistint_t - prints all element of list
+ * print_dlistint - prints all element of list
  * @h: the head of list
  * Return: number of nodes in list
  */
